@@ -44,7 +44,7 @@ def main():
         
         if mode == 1:
             #os.system('clear')
-            print("<< use-case 2 : Sign in >>")
+            print("<< TC2 : Sign in >>")
             print("_request sign_in")
             si = ClientUI.SignInUI("", "")
             si.signIn()
@@ -57,7 +57,7 @@ def main():
             
         elif mode == 2:
             #os.system('clear')
-            print("<< use-case 1 : Sign up >> ")
+            print("<< TC1 : Sign up >> ")
             print("_request sign-up")
             su = ClientUI.SignUpUI()
             su.signUp()
@@ -76,7 +76,7 @@ def main():
             break
         
         elif mode == 1:
-            print("<< use-case 3 : Update a profile")
+            print("<< TC3 : Update a profile >>")
             print("_update a profile")
             up = ClientUI.UpdateProfileUI()
             up.sendProfile([si.id])
@@ -84,7 +84,7 @@ def main():
             #time.sleep(5)
         
         elif mode == 2:
-            print("<< use-case 4 : request delivery >>")
+            print("<< TC4 : request delivery >>")
             print("_Reqeust a delivery service")
             rd = UI.RequestDeliveryUI(data1)
             rd.sendinformation()
@@ -96,7 +96,7 @@ def main():
             if (not chance) :
                 print("please request delivery first")
                 continue
-            print("<< use-case 5 : track a package >>")
+            print("<< TC5 : track a package >>")
             print("_request a trackin information")
             ts = ClientUI.TrackingServiceUI()
             ts.sendTrackingRequest()
@@ -104,7 +104,7 @@ def main():
             #time.sleep(3)
             
         elif mode == 4:
-            print("<< use-case 6 : send a package >>")
+            print("<< TC6 : send a package >>")
             print("_request send a package")
             ss = ClientUI.SendingServiceUI(data2)
             ss.sendSendingRequest()
@@ -115,7 +115,7 @@ def main():
             if (not chance) :
                 print("please request delivery first")
                 continue
-            print("<< use-case 7 : Refund a package >>")
+            print("<< TC7 : Refund a package >>")
             print("_request refund service")
             sr = ClientUI.RefundServiceUI()
             sr.sendRefundRequest()

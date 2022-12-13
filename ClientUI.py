@@ -15,6 +15,7 @@ class ClientUI(UI.UI):
     
     def showResult(self):
         #os.system("clear")
+        print("_showResult()")
         print("--------------------------")
         print(self.result)
         print("--------------------------")
@@ -30,10 +31,6 @@ class SignUpUI(ClientUI):
         self.passwd = passwd
         self.phonenum = phonenum
         self.add = add
-    
-    def showResult(self):
-        print("_showResult()")
-        return super().showResult()
     
     def signUp(self):
         print("_signUp()")
@@ -53,10 +50,6 @@ class SignInUI(ClientUI):
         else:
             self.passwd = passwd
     
-    def showResult(self):
-        print("_showResult()")
-        return super().showResult()
-    
     def signIn(self):
         print("_signIn()")
         O1 = ManageSignIn.ManageSignIn([self.id, self.passwd])
@@ -71,10 +64,6 @@ class UpdateProfileUI(ClientUI):
         self.passwd = passwd
         self.phonenum = phonenum
         self.add = add
-    
-    def showResult(self):
-        print("_showResult()")
-        return super().showResult()
     
     def sendProfile(self, user):
         print("_sendProfile()")
@@ -103,10 +92,6 @@ class SendingServiceUI(ClientUI):
     def __init__(self, data):
         self.sendingInfo = data
     
-    def showResult(self):
-        print("_showResult()")
-        return super().showResult()
-    
     def sendSendingRequest(self):
         print("_sendSendingRequest()")
         O1 = ManageSendService.ManageSendService()
@@ -124,10 +109,6 @@ class RefundServiceUI(ClientUI):
     
     def __init__(self):
         self.refundInfo = []
-    
-    def showResult(self):
-        print("_showResult()")
-        return super().showResult()
     
     def sendRefundRequest(self):
         print("_sendRefundRequest()")

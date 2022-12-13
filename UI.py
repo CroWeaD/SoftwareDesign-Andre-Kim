@@ -5,7 +5,10 @@ class UI:
         self.result = []
         
     def showResult(self):
-        print("This is UI class")
+        print("--------------------------")
+        print("request success...")
+        print(self.result)
+        print("--------------------------")
 
 class RequestDeliveryUI(UI):
     def __init__(self, data):
@@ -13,13 +16,7 @@ class RequestDeliveryUI(UI):
         
     def showResult(self):
         print("_showResult()")
-        
-        print("--------------------------")
-        print("request success...")
-        print("courier name\t:", self.result[0])
-        print("tracking number\t:", self.result[1])
-        print("contract code\t:", self.result[2])
-        print("--------------------------")
+        super().showResult()
     
     def sendinformation(self):
         print("_sendinformation()")

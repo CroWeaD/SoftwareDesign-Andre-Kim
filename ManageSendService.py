@@ -31,7 +31,7 @@ class ManageSendService:
     def addInformation(self, mode, list):
         if mode == 0:
             print("_addInformation() (sending information)")
-            Data_Storage.DataStorage.sendingInfo.extend(list)
+            Data_Storage.DataStorage.sendingInfo = (list)
             Data_Storage.DataStorage.insert(list)
         elif mode == 1:
             print("_addInformation() (courier information)")
