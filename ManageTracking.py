@@ -21,7 +21,7 @@ class ManageTracking:
     
     def addInformation(self, list):
         print("_addInforamtion() (tracking information)")
-        Data_Storage.DataStorage.trackingInfo.extend(list)
+        Data_Storage.DataStorage.trackingInfo = list
         Data_Storage.DataStorage.insert(list)
         
     def transferTrackingInformation(self):

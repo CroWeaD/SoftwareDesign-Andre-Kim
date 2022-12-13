@@ -35,11 +35,11 @@ class ManageSendService:
             Data_Storage.DataStorage.insert(list)
         elif mode == 1:
             print("_addInformation() (courier information)")
-            Data_Storage.DataStorage.courierInfo.extend(list)
+            Data_Storage.DataStorage.courierInfo = list
             Data_Storage.DataStorage.insert(list)
         elif mode == 2:
             print("_addInformation() (tracking information)")
-            Data_Storage.DataStorage.trackingInfo.extend(list)
+            Data_Storage.DataStorage.trackingInfo = list
             Data_Storage.DataStorage.insert(list)
         
     def transferTrackingInformation(self):

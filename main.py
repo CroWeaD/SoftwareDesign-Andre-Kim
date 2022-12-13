@@ -94,7 +94,6 @@ def main():
             
         elif mode == 3:
             if (not chance) :
-                print("use-case 2 is pre condition")
                 print("please request delivery first")
                 continue
             print("<< use-case 5 : track a package >>")
@@ -114,7 +113,6 @@ def main():
                 
         elif mode == 5:
             if (not chance) :
-                print("use-case 2 is pre condition")
                 print("please request delivery first")
                 continue
             print("<< use-case 7 : Refund a package >>")
