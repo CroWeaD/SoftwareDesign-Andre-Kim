@@ -1,6 +1,5 @@
 # README
-git clone YOUR_REPO
-https://github.com/CroWeaD/SoftwareDesign-Andre-Kim.git
+git clone https://github.com/CroWeaD/SoftwareDesign-Andre-Kim.git
 
 This document describes the test case of the 'Goods Flow Logics System'.
 A brief description of each test case and instructions necessary for each test case are described.
