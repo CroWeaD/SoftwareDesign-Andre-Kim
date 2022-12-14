@@ -5,10 +5,11 @@ class ManageProfile:
         self.updateinfo = data
         
     def updateProfile(self, user):
+        print("_updateProfile()")
         i = 0
         for account in Data_Storage.DataStorage.account:
             if account[0] == user[0]:
-                    break
+                break
             
             i+=1
         
@@ -19,6 +20,7 @@ class ManageProfile:
             
             if req == "Y" or req == "y":
                 Data_Storage.DataStorage.update(user)   #수정될 가능성 높음
+                print("_return")
                 return "Deleted " + str(user)
                 
             elif req == "N" or req == "n":
@@ -52,7 +54,8 @@ class ManageProfile:
             Data_Storage.DataStorage.account.append(new_profile)
             
             Data_Storage.DataStorage.update(user)   #수정될 가능성 높음
-        
+            print("_return")
+
         return "Changed " + str(new_profile)
                     
             

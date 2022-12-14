@@ -8,20 +8,43 @@ class ManageDelivery:
         
     def addInformation(self, mode, list):
         if mode == 0:
-            self.orderinfo = list
-            Data_Storage.DataStorage.orderInfo.append(list)
+            print("_addInformation() (order information)")
+            Data_Storage.DataStorage.orderInfo.extend(list)
             Data_Storage.DataStorage.insert(list)
         elif mode == 1:
-            Data_Storage.DataStorage.courierInfo.append(list)
+            print("_addInformation() (courier information)")
+            Data_Storage.DataStorage.courierInfo.extend(list)
             Data_Storage.DataStorage.insert(list)
     
     def transferOrderInformation(self):
-        ci = CourierInfo.CourierInfo(self.orderinfo)
+        print("_transferOrderInformation()")
+        print("======================================")
+        print("order number\t:", Data_Storage.DataStorage.orderInfo[0])
+        print("package name\t:", Data_Storage.DataStorage.orderInfo[1])
+        print("cost\t\t:", Data_Storage.DataStorage.orderInfo[2])
+        print("client name\t:", Data_Storage.DataStorage.orderInfo[3])
+        print("receiver\t:", Data_Storage.DataStorage.orderInfo[4])
+        print("arrive point\t:", Data_Storage.DataStorage.orderInfo[5])
+        print("phone number\t:", Data_Storage.DataStorage.orderInfo[6])
+        print("message\t\t:", Data_Storage.DataStorage.orderInfo[7])
+        print("payment Type\t:", Data_Storage.DataStorage.orderInfo[8])
+        print("sender\t\t:", Data_Storage.DataStorage.orderInfo[9])
+        print("start point\t:", Data_Storage.DataStorage.orderInfo[10])
+        print("======================================")
+        ci = CourierInfo.CourierInfo()
         ci.sendOrderInformation()
-        self.couierInfo = ci.sendCourierInformation()
+        ci.sendCourierInformation()
+        self.couierInfo = ci.courierInfo
+        
         
     def transferCourierInformation(self):
-        return self.couierInfo
+        print("_transferCourierInformation()")
+        print("======================================")
+        print("Data_Storage")
+        print("orderInfo\t:", Data_Storage.DataStorage.orderInfo)
+        print("courierInfo\t:", Data_Storage.DataStorage.courierInfo)
+        print("======================================")
+        return Data_Storage.DataStorage.courierInfo
           
             
             

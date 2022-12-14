@@ -5,6 +5,7 @@ class ManageSignUp:
         self.signUpInfo = data
         
     def validateSignUp(self):
+        print("_validateSignUp()")
         for account in Data_Storage.DataStorage.account:
             if account[0] == self.signUpInfo[0]:
                 return False
@@ -15,6 +16,7 @@ class ManageSignUp:
         for account in Data_Storage.DataStorage.account:
             print(account)
         
+        print("_result (True or False)")
         return True
                     
             

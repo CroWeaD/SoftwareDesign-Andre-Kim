@@ -4,24 +4,26 @@ class UI:
     def __init__(self):
         self.result = []
         
-    def showresult(self):
-        print("This is UI class")
+    def showResult(self):
+        print("--------------------------")
+        print("request success...")
+        print(self.result)
+        print("--------------------------")
 
 class RequestDeliveryUI(UI):
     def __init__(self, data):
         self.orderInfo = data 
         
-    def showresult(self):
-        print("--------------------------")
-        print(self.result)
-        print("--------------------------")
+    def showResult(self):
+        print("_showResult()")
+        super().showResult()
     
     def sendinformation(self):
+        print("_sendinformation()")
         md = ManageDelivery.ManageDelivery()
         md.addInformation(0, self.orderInfo)
         md.transferOrderInformation()
         md.addInformation(1, md.couierInfo)
         self.result = md.transferCourierInformation()
-        
         
         
